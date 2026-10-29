@@ -1,0 +1,64 @@
+{
+  "baseline_false_positives": 0,
+  "overall_metrics": {
+    "true_positives": 25,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.9615,
+    "recall": 1.0,
+    "f1_score": 0.9804,
+    "meets_criteria": true
+  },
+  "per_scenario": {
+    "unreviewed_advancement": {
+      "ground_truth_count": 5,
+      "detected_count": 5,
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "interviewer_double_booked": {
+      "ground_truth_count": 5,
+      "detected_count": 6,
+      "true_positives": 5,
+      "false_positives": 1,
+      "false_negatives": 0,
+      "precision": 0.8333,
+      "recall": 1.0,
+      "f1": 0.9091
+    },
+    "offer_exceeds_band": {
+      "ground_truth_count": 5,
+      "detected_count": 5,
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "withdrawn_app_scheduled": {
+      "ground_truth_count": 5,
+      "detected_count": 5,
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "irrelevant_criterion": {
+      "ground_truth_count": 5,
+      "detected_count": 5,
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  }
+}

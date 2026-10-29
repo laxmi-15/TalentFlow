@@ -1,0 +1,25 @@
+business_id,name,email,role,active,password_hash,created_at
+USR-000001,Lauren Nash,lauren0@example.test,Admin,True,$2b$12$placeholder_hash_for_synthetic_data,2026-07-19T13:00:55.573212+00:00
+USR-000002,Rodney Hall,rodney1@example.test,Admin,True,$2b$12$placeholder_hash_for_synthetic_data,2026-03-14T11:52:13.573212+00:00
+USR-000003,Roger Anderson,roger2@example.test,Recruiter,True,$2b$12$placeholder_hash_for_synthetic_data,2026-06-10T12:38:10.573212+00:00
+USR-000004,Eric Miles,eric3@example.test,Recruiter,True,$2b$12$placeholder_hash_for_synthetic_data,2026-02-15T10:37:40.573212+00:00
+USR-000005,Ashley Lee,ashley4@example.test,Recruiter,True,$2b$12$placeholder_hash_for_synthetic_data,2026-01-03T13:33:53.573212+00:00
+USR-000006,Brian Garza,brian5@example.test,Recruiter,True,$2b$12$placeholder_hash_for_synthetic_data,2025-11-16T09:29:34.573212+00:00
+USR-000007,Brian Thomas,brian6@example.test,HiringManager,True,$2b$12$placeholder_hash_for_synthetic_data,2026-01-30T08:59:26.573212+00:00
+USR-000008,Anthony Bass,anthony7@example.test,HiringManager,True,$2b$12$placeholder_hash_for_synthetic_data,2026-01-26T01:13:00.573212+00:00
+USR-000009,Jim Sexton,jim8@example.test,HiringManager,True,$2b$12$placeholder_hash_for_synthetic_data,2026-01-27T15:32:56.573212+00:00
+USR-000010,Kayla Palmer,kayla9@example.test,HiringManager,True,$2b$12$placeholder_hash_for_synthetic_data,2025-10-29T16:33:47.573212+00:00
+USR-000011,Christopher Gilbert,christopher10@example.test,HiringManager,True,$2b$12$placeholder_hash_for_synthetic_data,2026-05-28T21:45:23.573212+00:00
+USR-000012,Brandon Bryant,brandon11@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2025-12-18T16:32:48.573212+00:00
+USR-000013,Amber Nash,amber12@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2025-11-20T12:03:39.573212+00:00
+USR-000014,Christine Brown,christine13@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2026-01-13T18:43:36.573212+00:00
+USR-000015,Brendan Wagner,brendan14@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2026-01-11T15:56:02.573212+00:00
+USR-000016,Benjamin Robinson,benjamin15@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2026-02-25T09:02:25.573212+00:00
+USR-000017,Karen Jones DDS,karen16@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2026-07-03T18:25:49.573212+00:00
+USR-000018,Holly Wise,holly17@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2026-07-10T23:08:55.573212+00:00
+USR-000019,Wendy Smith,wendy18@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2026-06-27T12:11:05.573212+00:00
+USR-000020,Mr. Allen Fletcher,mr.19@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2025-12-08T22:52:02.573212+00:00
+USR-000021,Jose Rodgers,jose20@example.test,Interviewer,True,$2b$12$placeholder_hash_for_synthetic_data,2026-01-11T16:14:16.573212+00:00
+USR-000022,Monique Vincent,monique21@example.test,Approver,True,$2b$12$placeholder_hash_for_synthetic_data,2025-12-25T22:05:13.573212+00:00
+USR-000023,Ryan Wilson,ryan22@example.test,Approver,True,$2b$12$placeholder_hash_for_synthetic_data,2026-05-13T21:07:18.573212+00:00
+USR-000024,Lauren Williams,lauren23@example.test,Approver,True,$2b$12$placeholder_hash_for_synthetic_data,2025-12-12T12:48:40.573212+00:00

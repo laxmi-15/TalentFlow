@@ -1,0 +1,46 @@
+{
+  "generator_version": "1.0.0",
+  "seed": 20261022,
+  "profile": "starter",
+  "generated_at": "2026-10-28T13:17:35.573212+00:00",
+  "dependency_versions": {
+    "faker": "40.43.0",
+    "pandas": "3.0.3",
+    "numpy": "2.5.0",
+    "python": "3.14.6"
+  },
+  "row_counts": {
+    "users": 24,
+    "hiring_managers": 5,
+    "interviewers": 10,
+    "availability": 150,
+    "panels": 3,
+    "panel_members": 9,
+    "requisitions": 20,
+    "skill_requirements": 67,
+    "candidates": 500,
+    "applications": 800,
+    "stage_events": 2311,
+    "interviews": 200,
+    "scorecards": 274,
+    "offers": 149,
+    "approvals": 44
+  },
+  "checksums": {
+    "users": "a33d8036b4277c60ea4c273ced6626ef4a9c68698c45da028a2e97aaecfe4785",
+    "hiring_managers": "115d0b28495314f9ef152b70b55964b934e093c2fcebfe34d7542797e296b4c9",
+    "interviewers": "b6941e4a1dda7cab6d62eea322a0c9567cf0af31a9610d11ceb4b981756f385c",
+    "availability": "5a1378b0feca7af696184ffe186325874c098ebd2037fe73ad0d20ab922f33de",
+    "panels": "00ebdc1d297d92a01a0bb49acc1901e47b8b4edfc53f4ca06ff9f67468918345",
+    "panel_members": "8c5e3a83bb2d8cceb387ef38e2f594dfad320e553e30699b3c03df4f81d56632",
+    "requisitions": "f098321d1a2ddf3134d398c5436ab191b14841b62609f6fdc92c800ded2b9f31",
+    "skill_requirements": "fac054231d19f1b0b44a77aa2be62650aa870081f54dc6e15cad4b22f1965d73",
+    "candidates": "12f96f344d3c507aacbc48d267d2a2e06704fcbb506dd46df6ec7358ed8c509c",
+    "applications": "bdd28ffac82ce889089ccbdf893aef3a638ab7d1ef40951a67385e677f76f5f1",
+    "stage_events": "b71e05250e0a055f7e5117544d7c6afee226c3f3251c7e3bf1f446a114954db0",
+    "interviews": "43810132b4455c8318a8e89436be2dd9d242e7f9e54d73b1ed34e57dcb72d3e6",
+    "scorecards": "339b204a82ff63b420333370afa5ef7cf3e70b95fa32fd3b86133e7513abb50c",
+    "offers": "43b84e891fdb742934d0248e1adef67f8341c2345c351f9b4f15072bcab842a8",
+    "approvals": "ab56c2e3b0d796d67725a55d938af39597844f54855da9d7d17d0d38b955c213"
+  }
+}

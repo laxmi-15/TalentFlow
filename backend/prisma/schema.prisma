@@ -1,0 +1,537 @@
+// TalentFlow Prisma Schema
+// PostgreSQL + Prisma ORM
+// All business IDs are human-readable; UUIDs are internal PKs
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────────────────────
+
+enum UserRole {
+  Admin
+  Recruiter
+  HiringManager
+  Interviewer
+  Approver
+}
+
+enum RequisitionStatus {
+  Draft
+  PendingApproval
+  Open
+  Closed
+  Rejected
+}
+
+enum CandidateSource {
+  Referral
+  CareerssSite
+  Agency
+  JobBoard
+  Campus
+}
+
+enum ApplicationStage {
+  Applied
+  Screen
+  Interview
+  Final
+  Offer
+  Hired
+  Withdrawn
+}
+
+enum InterviewStatus {
+  Scheduled
+  Completed
+  Cancelled
+  Rescheduled
+}
+
+enum ScorecardRecommendation {
+  StrongYes
+  Yes
+  No
+  StrongNo
+}
+
+enum OfferStatus {
+  PendingApproval
+  Approved
+  Rejected
+  Sent
+  Accepted
+  Declined
+}
+
+enum ApprovalStatus {
+  Pending
+  Approved
+  Rejected
+}
+
+enum ApprovalSubjectType {
+  Requisition
+  Offer
+}
+
+enum AnomalySeverity {
+  Low
+  Medium
+  High
+  Critical
+}
+
+enum AnomalyStatus {
+  Open
+  Investigating
+  Resolved
+}
+
+enum GenerationProfile {
+  starter
+  full
+}
+
+enum GenerationStatus {
+  Pending
+  Running
+  Completed
+  Failed
+}
+
+enum AnomalyIssueType {
+  MissingReview
+  InterviewerDoubleBooked
+  OfferExceedsBand
+  WithdrawnCandidateScheduled
+  WithdrawnCandidateStillScheduled
+  IrrelevantScorecardCriteria
+  IrrelevantScorecardCriterion
+}
+
+// ─── Support: ID Sequences ────────────────────────────────────────────────────
+
+model IdSequence {
+  scope     String   @id // e.g. "REQ-2026", "CAND", "APP"
+  nextVal   Int      @default(1) @map("next_val")
+  updatedAt DateTime @updatedAt  @map("updated_at")
+
+  @@map("id_sequences")
+}
+
+// ─── Users ───────────────────────────────────────────────────────────────────
+
+model User {
+  id           String   @id @default(uuid()) @db.Uuid
+  businessId   String   @unique @db.VarChar(20) // USR-000001
+  name         String   @db.VarChar(200)
+  email        String   @unique @db.VarChar(300)
+  role         UserRole
+  active       Boolean  @default(true)
+  passwordHash String   @db.VarChar(200)
+  createdAt    DateTime @default(now()) @db.Timestamptz
+  updatedAt    DateTime @updatedAt @db.Timestamptz
+
+  // Relations
+  hiringManager   HiringManager?
+  interviewer     Interviewer?
+  auditEventsAs   AuditEvent[]         @relation("AuditActor")
+  approvalsRequested Approval[]        @relation("ApprovalRequester")
+  approvalsDecided   Approval[]        @relation("ApprovalDecider")
+  stageEvents     StageEvent[]
+
+  @@map("users")
+}
+
+// ─── Hiring Managers ─────────────────────────────────────────────────────────
+
+model HiringManager {
+  id         String   @id @default(uuid()) @db.Uuid
+  userId     String   @unique @db.Uuid
+  department String   @db.VarChar(100)
+  createdAt  DateTime @default(now()) @db.Timestamptz
+
+  user         User          @relation(fields: [userId], references: [id])
+  requisitions Requisition[]
+
+  @@map("hiring_managers")
+}
+
+// ─── Requisitions ─────────────────────────────────────────────────────────────
+
+model Requisition {
+  id              String            @id @default(uuid()) @db.Uuid
+  businessId      String            @unique @db.VarChar(20) // REQ-2026-000001
+  title           String            @db.VarChar(200)
+  department      String            @db.VarChar(100)
+  location        String            @db.VarChar(100)
+  hiringManagerId String            @db.Uuid
+  headcount       Int
+  status          RequisitionStatus @default(Draft)
+  bandMin         Decimal           @db.Decimal(12, 2)
+  bandMax         Decimal           @db.Decimal(12, 2)
+  createdAt       DateTime          @default(now()) @db.Timestamptz
+  updatedAt       DateTime          @updatedAt @db.Timestamptz
+
+  hiringManager     HiringManager      @relation(fields: [hiringManagerId], references: [id])
+  skillRequirements SkillRequirement[]
+  applications      Application[]
+
+  @@map("requisitions")
+}
+
+// ─── Skill Requirements ───────────────────────────────────────────────────────
+
+model SkillRequirement {
+  id            String  @id @default(uuid()) @db.Uuid
+  requisitionId String  @db.Uuid
+  skill         String  @db.VarChar(100)
+  required      Boolean @default(true)
+  minYears      Int?    @db.SmallInt
+
+  requisition Requisition @relation(fields: [requisitionId], references: [id], onDelete: Cascade)
+
+  @@unique([requisitionId, skill])
+  @@map("skill_requirements")
+}
+
+// ─── Candidates ───────────────────────────────────────────────────────────────
+
+model Candidate {
+  id              String          @id @default(uuid()) @db.Uuid
+  businessId      String          @unique @db.VarChar(20) // CAND-000001
+  name            String          @db.VarChar(200)
+  email           String          @unique @db.VarChar(300)
+  phone           String?         @db.VarChar(30)
+  location        String          @db.VarChar(100)
+  source          CandidateSource
+  experienceYears Int             @db.SmallInt
+  skills          String[]
+  createdAt       DateTime        @default(now()) @db.Timestamptz
+  updatedAt       DateTime        @updatedAt @db.Timestamptz
+
+  applications Application[]
+
+  @@map("candidates")
+}
+
+// ─── Applications ─────────────────────────────────────────────────────────────
+
+model Application {
+  id            String           @id @default(uuid()) @db.Uuid
+  businessId    String           @unique @db.VarChar(100) // APP-CAND-000001-REQ-2026-000001
+  candidateId   String           @db.Uuid
+  requisitionId String           @db.Uuid
+  stage         ApplicationStage @default(Applied)
+  score         Decimal?         @db.Decimal(5, 2)
+  source        CandidateSource
+  createdAt     DateTime         @default(now()) @db.Timestamptz
+  updatedAt     DateTime         @updatedAt @db.Timestamptz
+
+  candidate   Candidate   @relation(fields: [candidateId], references: [id])
+  requisition Requisition @relation(fields: [requisitionId], references: [id])
+  interviews  Interview[]
+  stageEvents StageEvent[]
+  offer       Offer?
+  scorecards  Scorecard[]
+
+  @@unique([candidateId, requisitionId])
+  @@index([stage])
+  @@index([requisitionId])
+  @@map("applications")
+}
+
+// ─── Stage Events ─────────────────────────────────────────────────────────────
+
+model StageEvent {
+  id            String            @id @default(uuid()) @db.Uuid
+  applicationId String            @db.Uuid
+  fromStage     ApplicationStage?
+  toStage       ApplicationStage
+  actorId       String            @db.Uuid
+  reason        String?           @db.Text
+  createdAt     DateTime          @default(now()) @db.Timestamptz
+
+  application Application @relation(fields: [applicationId], references: [id])
+  actor       User        @relation(fields: [actorId], references: [id])
+
+  @@index([applicationId])
+  @@map("stage_events")
+}
+
+// ─── Interviewers ─────────────────────────────────────────────────────────────
+
+model Interviewer {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @unique @db.Uuid
+  team      String   @db.VarChar(100)
+  createdAt DateTime @default(now()) @db.Timestamptz
+
+  user         User                   @relation(fields: [userId], references: [id])
+  availability Availability[]
+  panelMembers InterviewPanelMember[]
+  interviews   InterviewInterviewer[]
+  scorecards   Scorecard[]
+
+  @@map("interviewers")
+}
+
+// ─── Availability ─────────────────────────────────────────────────────────────
+
+model Availability {
+  id           String  @id @default(uuid()) @db.Uuid
+  interviewerId String @db.Uuid
+  dayOfWeek    Int     @db.SmallInt // 0=Mon..4=Fri
+  block        Int     @db.SmallInt // 0=AM, 1=Midday, 2=PM
+  free         Boolean @default(true)
+
+  interviewer Interviewer @relation(fields: [interviewerId], references: [id], onDelete: Cascade)
+
+  @@unique([interviewerId, dayOfWeek, block])
+  @@map("availability")
+}
+
+// ─── Interview Panels ─────────────────────────────────────────────────────────
+
+model InterviewPanel {
+  id         String   @id @default(uuid()) @db.Uuid
+  businessId String   @unique @db.VarChar(20) // PNL-000001
+  name       String   @db.VarChar(200)
+  focus      String?  @db.VarChar(300)
+  createdAt  DateTime @default(now()) @db.Timestamptz
+
+  members    InterviewPanelMember[]
+  interviews Interview[]
+
+  @@map("interview_panels")
+}
+
+// ─── Interview Panel Members ──────────────────────────────────────────────────
+
+model InterviewPanelMember {
+  id           String @id @default(uuid()) @db.Uuid
+  panelId      String @db.Uuid
+  interviewerId String @db.Uuid
+
+  panel       InterviewPanel @relation(fields: [panelId], references: [id], onDelete: Cascade)
+  interviewer Interviewer    @relation(fields: [interviewerId], references: [id], onDelete: Cascade)
+
+  @@unique([panelId, interviewerId])
+  @@map("interview_panel_members")
+}
+
+// ─── Interviews ───────────────────────────────────────────────────────────────
+
+model Interview {
+  id              String          @id @default(uuid()) @db.Uuid
+  businessId      String          @unique @db.VarChar(20) // INT-2026-000001
+  applicationId   String          @db.Uuid
+  panelId         String          @db.Uuid
+  title           String          @db.VarChar(200)
+  startAt         DateTime        @db.Timestamptz
+  endAt           DateTime        @db.Timestamptz
+  status          InterviewStatus @default(Scheduled)
+  originalStartAt DateTime?       @db.Timestamptz
+  cancelReason    String?         @db.Text
+  createdAt       DateTime        @default(now()) @db.Timestamptz
+  updatedAt       DateTime        @updatedAt @db.Timestamptz
+
+  application  Application            @relation(fields: [applicationId], references: [id])
+  panel        InterviewPanel         @relation(fields: [panelId], references: [id])
+  interviewers InterviewInterviewer[]
+  scorecards   Scorecard[]
+
+  @@index([applicationId])
+  @@index([startAt])
+  @@map("interviews")
+}
+
+// ─── Interview ↔ Interviewer (Anti-overlap junction) ─────────────────────────
+
+model InterviewInterviewer {
+  interviewId   String @db.Uuid
+  interviewerId String @db.Uuid
+
+  interview   Interview   @relation(fields: [interviewId], references: [id], onDelete: Cascade)
+  interviewer Interviewer @relation(fields: [interviewerId], references: [id], onDelete: Cascade)
+
+  @@id([interviewId, interviewerId])
+  @@map("interview_interviewers")
+}
+
+// ─── Rubric Criteria ──────────────────────────────────────────────────────────
+
+model RubricCriterion {
+  id               String   @id @default(uuid()) @db.Uuid
+  key              String   @unique @db.VarChar(50)
+  label            String   @db.VarChar(100)
+  hint             String?  @db.VarChar(300)
+  applicableStages String[] // ApplicationStage values
+  createdAt        DateTime @default(now()) @db.Timestamptz
+
+  ratings ScorecardRating[]
+
+  @@map("rubric_criteria")
+}
+
+// ─── Scorecards ───────────────────────────────────────────────────────────────
+
+model Scorecard {
+  id             String                  @id @default(uuid()) @db.Uuid
+  businessId     String                  @unique @db.VarChar(100) // SCORE-INT-...-IVR-...
+  interviewId    String                  @db.Uuid
+  interviewerId  String                  @db.Uuid
+  applicationId  String                  @db.Uuid
+  recommendation ScorecardRecommendation
+  notes          String?                 @db.Text
+  submittedAt    DateTime                @default(now()) @db.Timestamptz
+
+  interview   Interview       @relation(fields: [interviewId], references: [id])
+  interviewer Interviewer     @relation(fields: [interviewerId], references: [id])
+  application Application     @relation(fields: [applicationId], references: [id])
+  ratings     ScorecardRating[]
+
+  @@unique([interviewId, interviewerId])
+  @@map("scorecards")
+}
+
+// ─── Scorecard Ratings ────────────────────────────────────────────────────────
+
+model ScorecardRating {
+  id          String @id @default(uuid()) @db.Uuid
+  scorecardId String @db.Uuid
+  criterionId String @db.Uuid
+  rating      Int    @db.SmallInt // 1-5
+
+  scorecard Scorecard       @relation(fields: [scorecardId], references: [id], onDelete: Cascade)
+  criterion RubricCriterion @relation(fields: [criterionId], references: [id])
+
+  @@unique([scorecardId, criterionId])
+  @@map("scorecard_ratings")
+}
+
+// ─── Offers ───────────────────────────────────────────────────────────────────
+
+model Offer {
+  id            String      @id @default(uuid()) @db.Uuid
+  businessId    String      @unique @db.VarChar(20) // OFF-2026-000001
+  applicationId String      @unique @db.Uuid // one offer per application
+  base          Decimal     @db.Decimal(12, 2)
+  bonusPct      Decimal     @db.Decimal(5, 2)
+  bandMin       Decimal     @db.Decimal(12, 2) // snapshot at offer time
+  bandMax       Decimal     @db.Decimal(12, 2) // snapshot at offer time
+  status        OfferStatus @default(PendingApproval)
+  outOfBand     Boolean     @default(false)
+  createdAt     DateTime    @default(now()) @db.Timestamptz
+  updatedAt     DateTime    @updatedAt @db.Timestamptz
+
+  application Application @relation(fields: [applicationId], references: [id])
+
+  @@map("offers")
+}
+
+// ─── Approvals ────────────────────────────────────────────────────────────────
+
+model Approval {
+  id           String              @id @default(uuid()) @db.Uuid
+  businessId   String              @unique @db.VarChar(20) // APR-000001
+  subjectType  ApprovalSubjectType
+  subjectId    String              @db.Uuid // points to requisition or offer
+  subjectLabel String              @db.VarChar(300)
+  requestedById String            @db.Uuid
+  approverId   String?             @db.Uuid
+  status       ApprovalStatus      @default(Pending)
+  reason       String?             @db.Text
+  createdAt    DateTime            @default(now()) @db.Timestamptz
+  decidedAt    DateTime?           @db.Timestamptz
+
+  requester    User         @relation("ApprovalRequester", fields: [requestedById], references: [id])
+  approver     User?        @relation("ApprovalDecider", fields: [approverId], references: [id])
+
+  @@index([status])
+  @@map("approvals")
+}
+
+// ─── Audit Events ─────────────────────────────────────────────────────────────
+
+model AuditEvent {
+  id          String   @id @default(uuid()) @db.Uuid
+  businessId  String   @unique @db.VarChar(20) // AUD-000001
+  actorId     String   @db.Uuid
+  action      String   @db.VarChar(100)
+  entityType  String   @db.VarChar(50)
+  entityId    String   @db.Uuid
+  beforeState Json?
+  afterState  Json?
+  createdAt   DateTime @default(now()) @db.Timestamptz
+
+  actor User @relation("AuditActor", fields: [actorId], references: [id])
+
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@map("audit_events")
+}
+
+// ─── Generation Runs ──────────────────────────────────────────────────────────
+
+model GenerationRun {
+  id                String            @id @default(uuid()) @db.Uuid
+  businessId        String            @unique @db.VarChar(20) // GEN-000001
+  seed              BigInt
+  profile           GenerationProfile
+  generatorVersion  String            @db.VarChar(20)
+  status            GenerationStatus  @default(Pending)
+  outputPath        String?           @db.VarChar(500)
+  checksumSha256    String?           @db.VarChar(64)
+  rowCounts         Json?
+  createdAt         DateTime          @default(now()) @db.Timestamptz
+  completedAt       DateTime?         @db.Timestamptz
+
+  validationResults ValidationResult[]
+
+  @@map("generation_runs")
+}
+
+// ─── Validation Results ───────────────────────────────────────────────────────
+
+model ValidationResult {
+  id               String    @id @default(uuid()) @db.Uuid
+  generationRunId  String    @db.Uuid
+  checkName        String    @db.VarChar(100)
+  issueType        String?   @db.VarChar(100)
+  affectedRecordId String?   @db.VarChar(100)
+  expectedDecision String?   @db.VarChar(50)
+  severity         String?   @db.VarChar(20)
+  status           AnomalyStatus @default(Open)
+  isAnomaly        Boolean   @default(false)
+  detected         Boolean   @default(false)
+  tp               Boolean?
+  fp               Boolean?
+  fn               Boolean?
+  total            Int?
+  passed           Int?
+  createdAt        DateTime  @default(now()) @db.Timestamptz
+
+  generationRun GenerationRun @relation(fields: [generationRunId], references: [id])
+
+  @@index([generationRunId])
+  @@map("validation_results")
+}
+
+// ─── Settings ────────────────────────────────────────────────────────────────
+
+model Settings {
+  id                   String  @id @default("singleton")
+  orgName              String  @db.VarChar(200)
+  timezone             String  @db.VarChar(100)
+  requireOfferApproval Boolean @default(true)
+
+  @@map("settings")
+}

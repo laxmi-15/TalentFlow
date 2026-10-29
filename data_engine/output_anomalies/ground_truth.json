@@ -1,0 +1,167 @@
+[
+  {
+    "scenario": "unreviewed_advancement",
+    "record_type": "Application",
+    "record_id": "APP-CAND-001230-REQ-2026-000181",
+    "label": "Candidate advanced without review"
+  },
+  {
+    "scenario": "unreviewed_advancement",
+    "record_type": "Application",
+    "record_id": "APP-CAND-002988-REQ-2026-000121",
+    "label": "Candidate advanced without review"
+  },
+  {
+    "scenario": "unreviewed_advancement",
+    "record_type": "Application",
+    "record_id": "APP-CAND-003356-REQ-2026-000147",
+    "label": "Candidate advanced without review"
+  },
+  {
+    "scenario": "unreviewed_advancement",
+    "record_type": "Application",
+    "record_id": "APP-CAND-004370-REQ-2026-000023",
+    "label": "Candidate advanced without review"
+  },
+  {
+    "scenario": "unreviewed_advancement",
+    "record_type": "Application",
+    "record_id": "APP-CAND-000622-REQ-2026-000005",
+    "label": "Candidate advanced without review"
+  },
+  {
+    "scenario": "interviewer_double_booked",
+    "record_type": "Interview",
+    "record_id": "INT-2026-000464",
+    "conflicting_record_id": "INT-2026-001394",
+    "interviewer_id": "USR-000111",
+    "label": "Interviewer double booked"
+  },
+  {
+    "scenario": "interviewer_double_booked",
+    "record_type": "Interview",
+    "record_id": "INT-2026-000474",
+    "conflicting_record_id": "INT-2026-000724",
+    "interviewer_id": "USR-000074",
+    "label": "Interviewer double booked"
+  },
+  {
+    "scenario": "interviewer_double_booked",
+    "record_type": "Interview",
+    "record_id": "INT-2026-001241",
+    "conflicting_record_id": "INT-2026-001187",
+    "interviewer_id": "USR-000070",
+    "label": "Interviewer double booked"
+  },
+  {
+    "scenario": "interviewer_double_booked",
+    "record_type": "Interview",
+    "record_id": "INT-2026-000518",
+    "conflicting_record_id": "INT-2026-000581",
+    "interviewer_id": "USR-000096",
+    "label": "Interviewer double booked"
+  },
+  {
+    "scenario": "interviewer_double_booked",
+    "record_type": "Interview",
+    "record_id": "INT-2026-000355",
+    "conflicting_record_id": "INT-2026-001750",
+    "interviewer_id": "USR-000060",
+    "label": "Interviewer double booked"
+  },
+  {
+    "scenario": "offer_exceeds_band",
+    "record_type": "Offer",
+    "record_id": "OFF-2026-000911",
+    "label": "Offer exceeds band"
+  },
+  {
+    "scenario": "offer_exceeds_band",
+    "record_type": "Offer",
+    "record_id": "OFF-2026-001148",
+    "label": "Offer exceeds band"
+  },
+  {
+    "scenario": "offer_exceeds_band",
+    "record_type": "Offer",
+    "record_id": "OFF-2026-000073",
+    "label": "Offer exceeds band"
+  },
+  {
+    "scenario": "offer_exceeds_band",
+    "record_type": "Offer",
+    "record_id": "OFF-2026-000064",
+    "label": "Offer exceeds band"
+  },
+  {
+    "scenario": "offer_exceeds_band",
+    "record_type": "Offer",
+    "record_id": "OFF-2026-000557",
+    "label": "Offer exceeds band"
+  },
+  {
+    "scenario": "withdrawn_app_scheduled",
+    "record_type": "Interview",
+    "record_id": "INT-2026-001746",
+    "application_id": "APP-CAND-004337-REQ-2026-000063",
+    "label": "Withdrawn application interview scheduled"
+  },
+  {
+    "scenario": "withdrawn_app_scheduled",
+    "record_type": "Interview",
+    "record_id": "INT-2026-001455",
+    "application_id": "APP-CAND-003166-REQ-2026-000005",
+    "label": "Withdrawn application interview scheduled"
+  },
+  {
+    "scenario": "withdrawn_app_scheduled",
+    "record_type": "Interview",
+    "record_id": "INT-2026-001616",
+    "application_id": "APP-CAND-004483-REQ-2026-000134",
+    "label": "Withdrawn application interview scheduled"
+  },
+  {
+    "scenario": "withdrawn_app_scheduled",
+    "record_type": "Interview",
+    "record_id": "INT-2026-001826",
+    "application_id": "APP-CAND-002576-REQ-2026-000093",
+    "label": "Withdrawn application interview scheduled"
+  },
+  {
+    "scenario": "withdrawn_app_scheduled",
+    "record_type": "Interview",
+    "record_id": "INT-2026-001786",
+    "application_id": "APP-CAND-003780-REQ-2026-000133",
+    "label": "Withdrawn application interview scheduled"
+  },
+  {
+    "scenario": "irrelevant_criterion",
+    "record_type": "Scorecard",
+    "record_id": "SCORE-INT-2026-000400-USR-000111",
+    "label": "Scorecard with unapproved criterion"
+  },
+  {
+    "scenario": "irrelevant_criterion",
+    "record_type": "Scorecard",
+    "record_id": "SCORE-INT-2026-000977-USR-000076",
+    "label": "Scorecard with unapproved criterion"
+  },
+  {
+    "scenario": "irrelevant_criterion",
+    "record_type": "Scorecard",
+    "record_id": "SCORE-INT-2026-000451-USR-000122",
+    "label": "Scorecard with unapproved criterion"
+  },
+  {
+    "scenario": "irrelevant_criterion",
+    "record_type": "Scorecard",
+    "record_id": "SCORE-INT-2026-001355-USR-000112",
+    "label": "Scorecard with unapproved criterion"
+  },
+  {
+    "scenario": "irrelevant_criterion",
+    "record_type": "Scorecard",
+    "record_id": "SCORE-INT-2026-000825-USR-000104",
+    "label": "Scorecard with unapproved criterion"
+  }
+]

@@ -1,0 +1,699 @@
+requisition_id,skill,required,min_years
+REQ-2026-000001,Security,False,
+REQ-2026-000001,Product Strategy,False,2.0
+REQ-2026-000001,React,True,5.0
+REQ-2026-000002,Go,True,
+REQ-2026-000002,Leadership,True,
+REQ-2026-000002,TypeScript,True,
+REQ-2026-000003,Rust,True,5.0
+REQ-2026-000003,Leadership,True,2.0
+REQ-2026-000003,Java,True,3.0
+REQ-2026-000003,Data Modelling,True,
+REQ-2026-000003,Python,True,
+REQ-2026-000004,Hiring,False,3.0
+REQ-2026-000004,TypeScript,False,
+REQ-2026-000004,Security,True,3.0
+REQ-2026-000005,Excel,False,
+REQ-2026-000005,Kubernetes,True,
+REQ-2026-000005,SQL,True,
+REQ-2026-000006,Figma,False,
+REQ-2026-000006,TypeScript,True,
+REQ-2026-000007,Rust,False,5.0
+REQ-2026-000007,SQL,True,3.0
+REQ-2026-000007,Java,True,1.0
+REQ-2026-000007,Go,True,2.0
+REQ-2026-000007,Security,True,
+REQ-2026-000008,SQL,True,
+REQ-2026-000008,Data Modelling,True,5.0
+REQ-2026-000009,Kubernetes,True,
+REQ-2026-000009,TypeScript,True,
+REQ-2026-000009,Python,True,1.0
+REQ-2026-000010,Figma,True,
+REQ-2026-000010,Kubernetes,True,1.0
+REQ-2026-000010,Data Modelling,False,1.0
+REQ-2026-000010,Product Strategy,False,
+REQ-2026-000011,Java,True,5.0
+REQ-2026-000011,Leadership,True,
+REQ-2026-000011,Python,True,1.0
+REQ-2026-000011,Security,True,5.0
+REQ-2026-000011,Hiring,True,5.0
+REQ-2026-000012,Data Modelling,True,2.0
+REQ-2026-000012,Java,True,1.0
+REQ-2026-000012,Product Strategy,True,
+REQ-2026-000012,Security,True,
+REQ-2026-000012,Excel,True,
+REQ-2026-000013,Python,False,4.0
+REQ-2026-000013,Security,False,4.0
+REQ-2026-000013,TypeScript,True,
+REQ-2026-000013,Research,True,2.0
+REQ-2026-000014,Excel,False,5.0
+REQ-2026-000014,Data Modelling,True,
+REQ-2026-000015,Research,True,
+REQ-2026-000015,Leadership,True,
+REQ-2026-000015,Product Strategy,True,
+REQ-2026-000015,Rust,True,2.0
+REQ-2026-000015,Excel,True,1.0
+REQ-2026-000016,TypeScript,True,3.0
+REQ-2026-000016,Python,True,
+REQ-2026-000016,Data Modelling,True,
+REQ-2026-000016,Negotiation,True,4.0
+REQ-2026-000017,Negotiation,False,
+REQ-2026-000017,Kubernetes,True,
+REQ-2026-000017,Security,True,
+REQ-2026-000017,TypeScript,True,5.0
+REQ-2026-000017,Research,True,3.0
+REQ-2026-000018,Data Modelling,False,
+REQ-2026-000018,Kubernetes,True,
+REQ-2026-000018,Rust,False,3.0
+REQ-2026-000019,Java,True,
+REQ-2026-000019,Security,True,2.0
+REQ-2026-000019,Rust,True,2.0
+REQ-2026-000019,Kubernetes,True,
+REQ-2026-000020,Rust,True,
+REQ-2026-000020,Leadership,True,
+REQ-2026-000020,Negotiation,True,3.0
+REQ-2026-000020,Data Modelling,True,2.0
+REQ-2026-000021,Negotiation,True,2.0
+REQ-2026-000021,Hiring,True,5.0
+REQ-2026-000021,Python,True,
+REQ-2026-000021,Go,False,1.0
+REQ-2026-000021,Leadership,True,
+REQ-2026-000022,Kubernetes,True,3.0
+REQ-2026-000022,Security,True,
+REQ-2026-000022,TypeScript,True,
+REQ-2026-000023,Go,True,
+REQ-2026-000023,Product Strategy,True,
+REQ-2026-000023,Excel,True,
+REQ-2026-000023,SQL,True,
+REQ-2026-000024,Negotiation,False,
+REQ-2026-000024,Hiring,True,2.0
+REQ-2026-000024,Java,True,
+REQ-2026-000024,Python,True,1.0
+REQ-2026-000024,Excel,True,
+REQ-2026-000025,Data Modelling,True,5.0
+REQ-2026-000025,Negotiation,True,3.0
+REQ-2026-000025,Kubernetes,True,
+REQ-2026-000025,Product Strategy,True,
+REQ-2026-000026,Research,True,
+REQ-2026-000026,Rust,True,
+REQ-2026-000026,Kubernetes,False,5.0
+REQ-2026-000026,Go,False,5.0
+REQ-2026-000027,Leadership,False,1.0
+REQ-2026-000027,Security,True,3.0
+REQ-2026-000028,TypeScript,True,
+REQ-2026-000028,Security,True,
+REQ-2026-000028,Hiring,True,
+REQ-2026-000028,Research,False,
+REQ-2026-000029,TypeScript,True,
+REQ-2026-000029,Negotiation,True,5.0
+REQ-2026-000029,Go,True,
+REQ-2026-000030,Java,True,
+REQ-2026-000030,Figma,False,
+REQ-2026-000030,TypeScript,False,1.0
+REQ-2026-000030,Hiring,False,
+REQ-2026-000031,Hiring,True,
+REQ-2026-000031,Figma,True,
+REQ-2026-000031,Research,False,
+REQ-2026-000031,Java,True,3.0
+REQ-2026-000032,Leadership,False,
+REQ-2026-000032,Java,False,5.0
+REQ-2026-000033,Figma,True,2.0
+REQ-2026-000033,Python,True,5.0
+REQ-2026-000033,Research,True,
+REQ-2026-000033,Data Modelling,True,
+REQ-2026-000034,Negotiation,True,
+REQ-2026-000034,Rust,True,3.0
+REQ-2026-000034,Kubernetes,True,2.0
+REQ-2026-000034,Security,True,3.0
+REQ-2026-000035,Java,True,
+REQ-2026-000035,TypeScript,False,
+REQ-2026-000035,Product Strategy,True,5.0
+REQ-2026-000035,SQL,True,4.0
+REQ-2026-000036,TypeScript,True,
+REQ-2026-000036,Security,True,2.0
+REQ-2026-000036,React,True,
+REQ-2026-000036,Rust,True,
+REQ-2026-000037,Java,True,
+REQ-2026-000037,SQL,True,
+REQ-2026-000037,Excel,False,2.0
+REQ-2026-000037,Security,True,
+REQ-2026-000037,Leadership,True,
+REQ-2026-000038,Negotiation,True,
+REQ-2026-000038,SQL,True,
+REQ-2026-000038,Go,True,
+REQ-2026-000038,Kubernetes,False,
+REQ-2026-000038,Product Strategy,True,
+REQ-2026-000039,Leadership,True,2.0
+REQ-2026-000039,Data Modelling,False,2.0
+REQ-2026-000039,Python,True,1.0
+REQ-2026-000039,Figma,True,1.0
+REQ-2026-000040,Figma,True,
+REQ-2026-000040,Python,True,
+REQ-2026-000041,Leadership,False,3.0
+REQ-2026-000041,Product Strategy,True,
+REQ-2026-000041,Security,False,
+REQ-2026-000041,SQL,True,3.0
+REQ-2026-000041,Data Modelling,True,2.0
+REQ-2026-000042,Research,False,
+REQ-2026-000042,Rust,True,4.0
+REQ-2026-000042,Excel,True,
+REQ-2026-000043,Kubernetes,True,3.0
+REQ-2026-000043,Leadership,False,4.0
+REQ-2026-000043,Excel,True,
+REQ-2026-000044,Java,True,
+REQ-2026-000044,Hiring,False,
+REQ-2026-000044,Security,False,
+REQ-2026-000045,Figma,True,4.0
+REQ-2026-000045,Negotiation,True,
+REQ-2026-000045,Go,True,4.0
+REQ-2026-000045,Data Modelling,True,
+REQ-2026-000045,Python,True,
+REQ-2026-000046,Go,False,
+REQ-2026-000046,Security,False,
+REQ-2026-000046,Rust,True,3.0
+REQ-2026-000046,Leadership,True,3.0
+REQ-2026-000046,TypeScript,False,3.0
+REQ-2026-000047,Java,True,4.0
+REQ-2026-000047,Data Modelling,True,5.0
+REQ-2026-000047,Hiring,True,3.0
+REQ-2026-000048,Product Strategy,False,
+REQ-2026-000048,Security,False,
+REQ-2026-000048,Python,False,4.0
+REQ-2026-000049,Kubernetes,True,
+REQ-2026-000049,Hiring,True,
+REQ-2026-000050,Java,False,2.0
+REQ-2026-000050,Product Strategy,True,3.0
+REQ-2026-000050,Python,True,1.0
+REQ-2026-000050,TypeScript,True,4.0
+REQ-2026-000051,SQL,True,3.0
+REQ-2026-000051,Python,False,
+REQ-2026-000052,Leadership,True,
+REQ-2026-000052,Go,True,5.0
+REQ-2026-000052,Hiring,True,2.0
+REQ-2026-000053,Data Modelling,True,1.0
+REQ-2026-000053,Go,False,
+REQ-2026-000053,Java,True,
+REQ-2026-000053,Kubernetes,True,5.0
+REQ-2026-000054,Java,True,
+REQ-2026-000054,TypeScript,True,5.0
+REQ-2026-000054,Rust,True,2.0
+REQ-2026-000054,Research,False,
+REQ-2026-000054,Excel,True,2.0
+REQ-2026-000055,Data Modelling,True,
+REQ-2026-000055,Leadership,False,
+REQ-2026-000056,Negotiation,False,4.0
+REQ-2026-000056,TypeScript,False,
+REQ-2026-000056,Research,True,1.0
+REQ-2026-000056,Java,True,
+REQ-2026-000056,Python,False,
+REQ-2026-000057,Rust,False,4.0
+REQ-2026-000057,Excel,True,
+REQ-2026-000057,Negotiation,True,3.0
+REQ-2026-000057,SQL,True,
+REQ-2026-000057,Hiring,False,
+REQ-2026-000058,SQL,True,2.0
+REQ-2026-000058,Java,True,4.0
+REQ-2026-000058,TypeScript,True,1.0
+REQ-2026-000058,Leadership,True,1.0
+REQ-2026-000059,Go,False,
+REQ-2026-000059,Kubernetes,False,
+REQ-2026-000059,Excel,True,
+REQ-2026-000060,Research,True,
+REQ-2026-000060,Leadership,True,4.0
+REQ-2026-000060,React,True,4.0
+REQ-2026-000060,Excel,True,1.0
+REQ-2026-000061,Security,False,1.0
+REQ-2026-000061,Rust,False,1.0
+REQ-2026-000062,Python,False,3.0
+REQ-2026-000062,TypeScript,False,2.0
+REQ-2026-000062,Leadership,False,2.0
+REQ-2026-000062,Figma,True,
+REQ-2026-000063,Hiring,True,3.0
+REQ-2026-000063,Go,True,5.0
+REQ-2026-000063,Negotiation,True,1.0
+REQ-2026-000063,Product Strategy,True,
+REQ-2026-000063,Java,False,
+REQ-2026-000064,TypeScript,True,2.0
+REQ-2026-000064,Research,False,
+REQ-2026-000064,Data Modelling,True,
+REQ-2026-000065,TypeScript,True,4.0
+REQ-2026-000065,Data Modelling,False,3.0
+REQ-2026-000065,Leadership,True,5.0
+REQ-2026-000065,Research,True,
+REQ-2026-000066,SQL,True,
+REQ-2026-000066,TypeScript,True,4.0
+REQ-2026-000066,Hiring,False,
+REQ-2026-000066,Rust,True,
+REQ-2026-000067,Hiring,False,
+REQ-2026-000067,TypeScript,False,3.0
+REQ-2026-000068,TypeScript,True,
+REQ-2026-000068,Research,False,
+REQ-2026-000068,Figma,True,3.0
+REQ-2026-000068,Security,True,
+REQ-2026-000068,Kubernetes,True,4.0
+REQ-2026-000069,Java,True,
+REQ-2026-000069,Excel,True,
+REQ-2026-000070,Go,False,
+REQ-2026-000070,Data Modelling,False,4.0
+REQ-2026-000071,Security,True,
+REQ-2026-000071,Go,True,3.0
+REQ-2026-000071,Java,True,
+REQ-2026-000071,Kubernetes,True,
+REQ-2026-000072,Leadership,True,4.0
+REQ-2026-000072,Hiring,True,2.0
+REQ-2026-000072,TypeScript,True,
+REQ-2026-000072,React,True,2.0
+REQ-2026-000072,Research,True,
+REQ-2026-000073,Kubernetes,True,4.0
+REQ-2026-000073,Hiring,True,
+REQ-2026-000073,Leadership,True,
+REQ-2026-000074,Java,True,5.0
+REQ-2026-000074,Go,True,1.0
+REQ-2026-000075,SQL,True,4.0
+REQ-2026-000075,Python,True,5.0
+REQ-2026-000075,Negotiation,True,
+REQ-2026-000075,Data Modelling,True,1.0
+REQ-2026-000076,Rust,True,4.0
+REQ-2026-000076,TypeScript,False,3.0
+REQ-2026-000076,Java,False,
+REQ-2026-000076,Security,True,5.0
+REQ-2026-000077,Hiring,True,
+REQ-2026-000077,Product Strategy,True,
+REQ-2026-000078,Product Strategy,False,1.0
+REQ-2026-000078,Python,False,
+REQ-2026-000079,TypeScript,True,
+REQ-2026-000079,Excel,True,
+REQ-2026-000079,Leadership,False,4.0
+REQ-2026-000079,Negotiation,False,
+REQ-2026-000080,Rust,True,
+REQ-2026-000080,Negotiation,True,5.0
+REQ-2026-000080,Research,True,5.0
+REQ-2026-000080,SQL,True,
+REQ-2026-000081,React,True,3.0
+REQ-2026-000081,Security,True,5.0
+REQ-2026-000082,React,True,1.0
+REQ-2026-000082,Java,True,2.0
+REQ-2026-000083,Leadership,True,
+REQ-2026-000083,Excel,True,5.0
+REQ-2026-000083,React,False,
+REQ-2026-000083,TypeScript,True,
+REQ-2026-000084,Python,False,2.0
+REQ-2026-000084,Excel,False,1.0
+REQ-2026-000085,TypeScript,True,
+REQ-2026-000085,Product Strategy,True,
+REQ-2026-000086,Product Strategy,False,5.0
+REQ-2026-000086,TypeScript,False,
+REQ-2026-000086,Go,True,
+REQ-2026-000086,Rust,False,
+REQ-2026-000086,Python,False,5.0
+REQ-2026-000087,React,False,4.0
+REQ-2026-000087,Excel,False,
+REQ-2026-000087,Data Modelling,False,5.0
+REQ-2026-000087,Rust,True,1.0
+REQ-2026-000088,Research,False,
+REQ-2026-000088,Excel,True,1.0
+REQ-2026-000088,Negotiation,True,
+REQ-2026-000089,Hiring,False,
+REQ-2026-000089,Go,True,
+REQ-2026-000090,Kubernetes,True,1.0
+REQ-2026-000090,Data Modelling,True,
+REQ-2026-000090,Excel,True,1.0
+REQ-2026-000090,Java,True,
+REQ-2026-000090,Python,True,
+REQ-2026-000091,SQL,True,
+REQ-2026-000091,Go,True,
+REQ-2026-000091,Hiring,False,3.0
+REQ-2026-000091,Kubernetes,True,5.0
+REQ-2026-000091,Security,True,
+REQ-2026-000092,Java,True,
+REQ-2026-000092,Leadership,True,
+REQ-2026-000092,React,True,4.0
+REQ-2026-000093,Research,False,4.0
+REQ-2026-000093,Negotiation,True,
+REQ-2026-000093,Go,True,1.0
+REQ-2026-000093,Hiring,True,3.0
+REQ-2026-000093,Product Strategy,True,
+REQ-2026-000094,Data Modelling,False,5.0
+REQ-2026-000094,Java,False,1.0
+REQ-2026-000094,Excel,False,3.0
+REQ-2026-000094,Research,False,1.0
+REQ-2026-000094,Rust,True,
+REQ-2026-000095,Leadership,True,5.0
+REQ-2026-000095,Product Strategy,True,2.0
+REQ-2026-000096,Hiring,False,
+REQ-2026-000096,Python,True,
+REQ-2026-000096,Research,True,5.0
+REQ-2026-000096,Rust,False,
+REQ-2026-000097,Excel,True,3.0
+REQ-2026-000097,Product Strategy,False,
+REQ-2026-000098,Java,False,3.0
+REQ-2026-000098,Leadership,False,5.0
+REQ-2026-000098,Go,True,5.0
+REQ-2026-000098,Excel,True,
+REQ-2026-000098,Rust,True,2.0
+REQ-2026-000099,Data Modelling,True,
+REQ-2026-000099,Kubernetes,False,1.0
+REQ-2026-000099,Negotiation,True,
+REQ-2026-000099,Excel,True,
+REQ-2026-000099,Go,True,5.0
+REQ-2026-000100,Excel,False,
+REQ-2026-000100,Product Strategy,True,5.0
+REQ-2026-000100,Kubernetes,True,
+REQ-2026-000100,Hiring,True,
+REQ-2026-000100,Java,True,4.0
+REQ-2026-000101,React,True,
+REQ-2026-000101,Hiring,True,5.0
+REQ-2026-000101,Python,True,
+REQ-2026-000102,TypeScript,True,4.0
+REQ-2026-000102,Rust,True,5.0
+REQ-2026-000103,Leadership,False,
+REQ-2026-000103,React,True,1.0
+REQ-2026-000103,Research,True,
+REQ-2026-000104,Negotiation,False,5.0
+REQ-2026-000104,Python,True,
+REQ-2026-000104,Excel,True,
+REQ-2026-000104,Go,True,
+REQ-2026-000105,Hiring,True,1.0
+REQ-2026-000105,Negotiation,False,2.0
+REQ-2026-000105,TypeScript,True,4.0
+REQ-2026-000106,SQL,True,
+REQ-2026-000106,Java,True,
+REQ-2026-000106,Leadership,True,2.0
+REQ-2026-000107,Kubernetes,True,
+REQ-2026-000107,Figma,False,5.0
+REQ-2026-000107,Data Modelling,True,2.0
+REQ-2026-000107,Negotiation,True,
+REQ-2026-000107,Python,True,
+REQ-2026-000108,Leadership,True,1.0
+REQ-2026-000108,SQL,False,
+REQ-2026-000108,Research,False,5.0
+REQ-2026-000108,React,True,2.0
+REQ-2026-000108,Excel,False,
+REQ-2026-000109,Research,True,
+REQ-2026-000109,Kubernetes,True,4.0
+REQ-2026-000109,React,True,
+REQ-2026-000109,Negotiation,False,3.0
+REQ-2026-000109,Data Modelling,True,1.0
+REQ-2026-000110,Security,True,
+REQ-2026-000110,Figma,True,4.0
+REQ-2026-000110,Hiring,True,5.0
+REQ-2026-000110,Data Modelling,True,
+REQ-2026-000111,SQL,False,
+REQ-2026-000111,Rust,True,5.0
+REQ-2026-000112,Excel,True,
+REQ-2026-000112,Data Modelling,True,1.0
+REQ-2026-000112,Python,False,
+REQ-2026-000112,Rust,False,
+REQ-2026-000113,Go,True,
+REQ-2026-000113,React,True,
+REQ-2026-000114,Product Strategy,True,2.0
+REQ-2026-000114,Java,True,2.0
+REQ-2026-000114,Leadership,True,
+REQ-2026-000115,Research,False,
+REQ-2026-000115,Figma,True,2.0
+REQ-2026-000116,Product Strategy,True,
+REQ-2026-000116,Rust,True,
+REQ-2026-000116,React,True,4.0
+REQ-2026-000116,Go,True,5.0
+REQ-2026-000116,Figma,True,4.0
+REQ-2026-000117,SQL,True,1.0
+REQ-2026-000117,Data Modelling,True,5.0
+REQ-2026-000118,Hiring,True,5.0
+REQ-2026-000118,Kubernetes,True,
+REQ-2026-000119,Negotiation,True,2.0
+REQ-2026-000119,Excel,True,1.0
+REQ-2026-000119,Research,True,
+REQ-2026-000119,Leadership,True,
+REQ-2026-000120,Excel,False,1.0
+REQ-2026-000120,Hiring,True,5.0
+REQ-2026-000120,TypeScript,True,
+REQ-2026-000121,Product Strategy,True,2.0
+REQ-2026-000121,Kubernetes,True,
+REQ-2026-000122,Go,True,
+REQ-2026-000122,TypeScript,True,1.0
+REQ-2026-000122,Rust,False,
+REQ-2026-000122,Research,True,
+REQ-2026-000123,Data Modelling,True,2.0
+REQ-2026-000123,Negotiation,True,3.0
+REQ-2026-000123,Security,False,
+REQ-2026-000123,Hiring,True,4.0
+REQ-2026-000124,Java,False,
+REQ-2026-000124,Leadership,True,
+REQ-2026-000124,Hiring,False,2.0
+REQ-2026-000124,Data Modelling,False,
+REQ-2026-000124,Negotiation,True,
+REQ-2026-000125,Go,False,2.0
+REQ-2026-000125,React,True,5.0
+REQ-2026-000125,Java,True,4.0
+REQ-2026-000126,Java,True,
+REQ-2026-000126,Product Strategy,True,3.0
+REQ-2026-000126,Research,True,
+REQ-2026-000127,Negotiation,False,3.0
+REQ-2026-000127,Data Modelling,True,4.0
+REQ-2026-000127,Product Strategy,True,
+REQ-2026-000128,Negotiation,True,1.0
+REQ-2026-000128,Hiring,True,2.0
+REQ-2026-000128,Excel,True,
+REQ-2026-000129,SQL,False,
+REQ-2026-000129,Figma,True,
+REQ-2026-000129,Excel,False,3.0
+REQ-2026-000129,Go,False,
+REQ-2026-000130,SQL,True,
+REQ-2026-000130,Product Strategy,True,
+REQ-2026-000130,Python,True,1.0
+REQ-2026-000131,TypeScript,True,4.0
+REQ-2026-000131,Leadership,False,
+REQ-2026-000131,Rust,True,
+REQ-2026-000131,Product Strategy,True,
+REQ-2026-000131,Figma,True,
+REQ-2026-000132,SQL,True,5.0
+REQ-2026-000132,Figma,True,2.0
+REQ-2026-000132,Product Strategy,True,5.0
+REQ-2026-000132,Rust,False,
+REQ-2026-000132,Kubernetes,False,
+REQ-2026-000133,Python,False,5.0
+REQ-2026-000133,Leadership,True,
+REQ-2026-000133,SQL,True,
+REQ-2026-000134,Leadership,False,
+REQ-2026-000134,Hiring,False,
+REQ-2026-000134,Excel,True,1.0
+REQ-2026-000135,Python,False,5.0
+REQ-2026-000135,Excel,True,3.0
+REQ-2026-000135,React,True,
+REQ-2026-000135,Go,True,5.0
+REQ-2026-000135,Data Modelling,False,1.0
+REQ-2026-000136,TypeScript,False,5.0
+REQ-2026-000136,Product Strategy,True,1.0
+REQ-2026-000137,React,False,3.0
+REQ-2026-000137,Data Modelling,True,
+REQ-2026-000137,Negotiation,True,4.0
+REQ-2026-000138,Hiring,True,3.0
+REQ-2026-000138,Product Strategy,True,
+REQ-2026-000138,TypeScript,False,
+REQ-2026-000138,Excel,False,
+REQ-2026-000139,Excel,True,
+REQ-2026-000139,Java,True,
+REQ-2026-000140,Rust,True,
+REQ-2026-000140,Hiring,True,4.0
+REQ-2026-000140,Figma,True,5.0
+REQ-2026-000140,Kubernetes,False,5.0
+REQ-2026-000140,SQL,False,3.0
+REQ-2026-000141,Hiring,False,
+REQ-2026-000141,Excel,False,
+REQ-2026-000142,Go,True,
+REQ-2026-000142,Python,True,4.0
+REQ-2026-000142,Research,False,4.0
+REQ-2026-000142,Rust,False,2.0
+REQ-2026-000142,Excel,False,
+REQ-2026-000143,Hiring,True,2.0
+REQ-2026-000143,Excel,True,
+REQ-2026-000143,Figma,True,
+REQ-2026-000144,Hiring,True,
+REQ-2026-000144,Figma,False,5.0
+REQ-2026-000144,Security,True,2.0
+REQ-2026-000144,Research,False,1.0
+REQ-2026-000145,Python,False,3.0
+REQ-2026-000145,Data Modelling,True,1.0
+REQ-2026-000145,Kubernetes,True,3.0
+REQ-2026-000145,React,True,
+REQ-2026-000146,Kubernetes,True,
+REQ-2026-000146,Python,True,
+REQ-2026-000146,Go,True,
+REQ-2026-000146,Leadership,False,1.0
+REQ-2026-000146,React,True,1.0
+REQ-2026-000147,Excel,True,4.0
+REQ-2026-000147,Figma,True,5.0
+REQ-2026-000147,Go,True,5.0
+REQ-2026-000147,Research,True,1.0
+REQ-2026-000148,Python,False,4.0
+REQ-2026-000148,Negotiation,True,
+REQ-2026-000149,Python,False,4.0
+REQ-2026-000149,Figma,True,
+REQ-2026-000150,Negotiation,False,1.0
+REQ-2026-000150,Research,True,2.0
+REQ-2026-000151,Leadership,False,4.0
+REQ-2026-000151,Kubernetes,True,5.0
+REQ-2026-000151,Research,False,2.0
+REQ-2026-000151,SQL,True,
+REQ-2026-000151,Java,False,
+REQ-2026-000152,Figma,True,
+REQ-2026-000152,Kubernetes,True,
+REQ-2026-000152,Go,True,3.0
+REQ-2026-000153,Security,True,3.0
+REQ-2026-000153,Product Strategy,False,
+REQ-2026-000154,Leadership,False,
+REQ-2026-000154,Negotiation,False,1.0
+REQ-2026-000154,Rust,True,3.0
+REQ-2026-000155,Hiring,False,3.0
+REQ-2026-000155,Research,True,5.0
+REQ-2026-000155,TypeScript,True,
+REQ-2026-000156,React,True,
+REQ-2026-000156,Security,True,
+REQ-2026-000156,Rust,True,4.0
+REQ-2026-000157,TypeScript,False,3.0
+REQ-2026-000157,Hiring,True,
+REQ-2026-000157,Negotiation,True,
+REQ-2026-000157,Kubernetes,True,
+REQ-2026-000158,Data Modelling,True,5.0
+REQ-2026-000158,Java,True,
+REQ-2026-000158,TypeScript,True,5.0
+REQ-2026-000158,Rust,True,
+REQ-2026-000159,Hiring,True,
+REQ-2026-000159,TypeScript,False,
+REQ-2026-000159,Data Modelling,True,
+REQ-2026-000159,Product Strategy,True,
+REQ-2026-000159,Research,False,
+REQ-2026-000160,Data Modelling,False,
+REQ-2026-000160,Excel,True,1.0
+REQ-2026-000161,Java,True,4.0
+REQ-2026-000161,Python,False,4.0
+REQ-2026-000161,Leadership,True,1.0
+REQ-2026-000161,Product Strategy,True,3.0
+REQ-2026-000161,Rust,True,
+REQ-2026-000162,React,True,2.0
+REQ-2026-000162,Excel,True,1.0
+REQ-2026-000163,TypeScript,True,3.0
+REQ-2026-000163,Hiring,True,
+REQ-2026-000164,React,False,
+REQ-2026-000164,TypeScript,True,4.0
+REQ-2026-000165,Kubernetes,True,
+REQ-2026-000165,SQL,True,5.0
+REQ-2026-000165,Security,True,1.0
+REQ-2026-000165,TypeScript,True,
+REQ-2026-000166,Figma,False,
+REQ-2026-000166,Java,True,4.0
+REQ-2026-000167,Negotiation,True,5.0
+REQ-2026-000167,Excel,False,
+REQ-2026-000167,Product Strategy,True,
+REQ-2026-000167,Research,False,
+REQ-2026-000167,Leadership,True,4.0
+REQ-2026-000168,Figma,True,
+REQ-2026-000168,Product Strategy,True,
+REQ-2026-000169,Leadership,True,1.0
+REQ-2026-000169,Data Modelling,True,1.0
+REQ-2026-000169,SQL,True,2.0
+REQ-2026-000169,Excel,True,
+REQ-2026-000169,Security,False,
+REQ-2026-000170,Leadership,False,2.0
+REQ-2026-000170,Kubernetes,False,3.0
+REQ-2026-000170,TypeScript,False,
+REQ-2026-000171,Kubernetes,False,2.0
+REQ-2026-000171,Figma,True,5.0
+REQ-2026-000172,Negotiation,True,3.0
+REQ-2026-000172,Java,True,4.0
+REQ-2026-000172,Research,False,
+REQ-2026-000172,Go,False,4.0
+REQ-2026-000173,Kubernetes,True,3.0
+REQ-2026-000173,Product Strategy,False,
+REQ-2026-000174,Kubernetes,False,
+REQ-2026-000174,Figma,True,3.0
+REQ-2026-000174,Security,True,5.0
+REQ-2026-000175,Go,False,
+REQ-2026-000175,Figma,True,3.0
+REQ-2026-000175,Rust,True,
+REQ-2026-000176,Hiring,True,3.0
+REQ-2026-000176,Data Modelling,True,
+REQ-2026-000177,Hiring,True,1.0
+REQ-2026-000177,Security,True,4.0
+REQ-2026-000177,Leadership,True,
+REQ-2026-000178,Kubernetes,True,1.0
+REQ-2026-000178,Security,True,
+REQ-2026-000178,Product Strategy,False,
+REQ-2026-000178,TypeScript,False,
+REQ-2026-000178,Python,True,
+REQ-2026-000179,SQL,False,
+REQ-2026-000179,Security,True,3.0
+REQ-2026-000179,Figma,True,
+REQ-2026-000179,Negotiation,True,1.0
+REQ-2026-000179,Java,False,4.0
+REQ-2026-000180,Kubernetes,True,
+REQ-2026-000180,Leadership,True,5.0
+REQ-2026-000180,Excel,True,
+REQ-2026-000181,TypeScript,False,5.0
+REQ-2026-000181,Security,False,
+REQ-2026-000181,Java,True,
+REQ-2026-000181,Leadership,True,
+REQ-2026-000181,Hiring,True,
+REQ-2026-000182,Excel,True,5.0
+REQ-2026-000182,Rust,False,
+REQ-2026-000182,Figma,False,2.0
+REQ-2026-000182,Security,True,
+REQ-2026-000182,Product Strategy,True,
+REQ-2026-000183,Figma,True,
+REQ-2026-000183,Kubernetes,False,3.0
+REQ-2026-000183,Data Modelling,True,3.0
+REQ-2026-000183,Java,True,
+REQ-2026-000184,Figma,True,2.0
+REQ-2026-000184,Data Modelling,True,
+REQ-2026-000185,Rust,True,5.0
+REQ-2026-000185,SQL,False,
+REQ-2026-000185,Kubernetes,True,
+REQ-2026-000185,Product Strategy,True,
+REQ-2026-000185,Negotiation,True,3.0
+REQ-2026-000186,Rust,True,
+REQ-2026-000186,Java,True,2.0
+REQ-2026-000186,TypeScript,False,2.0
+REQ-2026-000186,Kubernetes,True,5.0
+REQ-2026-000187,Kubernetes,True,
+REQ-2026-000187,Leadership,True,3.0
+REQ-2026-000188,Java,True,5.0
+REQ-2026-000188,Negotiation,True,2.0
+REQ-2026-000188,Go,False,3.0
+REQ-2026-000188,Research,True,
+REQ-2026-000189,Research,False,
+REQ-2026-000189,Go,True,
+REQ-2026-000189,Negotiation,False,4.0
+REQ-2026-000189,Java,True,2.0
+REQ-2026-000189,Security,True,1.0
+REQ-2026-000190,Figma,False,1.0
+REQ-2026-000190,Security,True,4.0
+REQ-2026-000191,Figma,True,5.0
+REQ-2026-000191,Hiring,True,4.0
+REQ-2026-000191,TypeScript,False,4.0
+REQ-2026-000192,Go,True,
+REQ-2026-000192,Negotiation,True,4.0
+REQ-2026-000192,Leadership,True,5.0
+REQ-2026-000192,React,True,4.0
+REQ-2026-000193,Negotiation,False,2.0
+REQ-2026-000193,React,False,5.0
+REQ-2026-000193,TypeScript,False,5.0
+REQ-2026-000194,Python,True,
+REQ-2026-000194,Security,True,1.0
+REQ-2026-000195,Security,True,5.0
+REQ-2026-000195,Product Strategy,True,1.0
+REQ-2026-000195,Negotiation,True,
+REQ-2026-000196,Research,True,
+REQ-2026-000196,Security,True,1.0
+REQ-2026-000196,Excel,False,
+REQ-2026-000197,Negotiation,True,5.0
+REQ-2026-000197,Hiring,True,
+REQ-2026-000198,SQL,True,3.0
+REQ-2026-000198,Excel,True,
+REQ-2026-000199,SQL,True,4.0
+REQ-2026-000199,Data Modelling,False,
+REQ-2026-000199,Negotiation,True,2.0
+REQ-2026-000199,Go,False,
+REQ-2026-000199,React,True,
+REQ-2026-000200,React,True,
+REQ-2026-000200,Python,True,3.0
+REQ-2026-000200,Data Modelling,False,2.0

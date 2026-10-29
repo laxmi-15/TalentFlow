@@ -1,0 +1,26 @@
+scenario,record_type,record_id,label,conflicting_record_id,interviewer_id,application_id
+unreviewed_advancement,Application,APP-CAND-001230-REQ-2026-000181,Candidate advanced without review,,,
+unreviewed_advancement,Application,APP-CAND-002988-REQ-2026-000121,Candidate advanced without review,,,
+unreviewed_advancement,Application,APP-CAND-003356-REQ-2026-000147,Candidate advanced without review,,,
+unreviewed_advancement,Application,APP-CAND-004370-REQ-2026-000023,Candidate advanced without review,,,
+unreviewed_advancement,Application,APP-CAND-000622-REQ-2026-000005,Candidate advanced without review,,,
+interviewer_double_booked,Interview,INT-2026-000464,Interviewer double booked,INT-2026-001394,USR-000111,
+interviewer_double_booked,Interview,INT-2026-000474,Interviewer double booked,INT-2026-000724,USR-000074,
+interviewer_double_booked,Interview,INT-2026-001241,Interviewer double booked,INT-2026-001187,USR-000070,
+interviewer_double_booked,Interview,INT-2026-000518,Interviewer double booked,INT-2026-000581,USR-000096,
+interviewer_double_booked,Interview,INT-2026-000355,Interviewer double booked,INT-2026-001750,USR-000060,
+offer_exceeds_band,Offer,OFF-2026-000911,Offer exceeds band,,,
+offer_exceeds_band,Offer,OFF-2026-001148,Offer exceeds band,,,
+offer_exceeds_band,Offer,OFF-2026-000073,Offer exceeds band,,,
+offer_exceeds_band,Offer,OFF-2026-000064,Offer exceeds band,,,
+offer_exceeds_band,Offer,OFF-2026-000557,Offer exceeds band,,,
+withdrawn_app_scheduled,Interview,INT-2026-001746,Withdrawn application interview scheduled,,,APP-CAND-004337-REQ-2026-000063
+withdrawn_app_scheduled,Interview,INT-2026-001455,Withdrawn application interview scheduled,,,APP-CAND-003166-REQ-2026-000005
+withdrawn_app_scheduled,Interview,INT-2026-001616,Withdrawn application interview scheduled,,,APP-CAND-004483-REQ-2026-000134
+withdrawn_app_scheduled,Interview,INT-2026-001826,Withdrawn application interview scheduled,,,APP-CAND-002576-REQ-2026-000093
+withdrawn_app_scheduled,Interview,INT-2026-001786,Withdrawn application interview scheduled,,,APP-CAND-003780-REQ-2026-000133
+irrelevant_criterion,Scorecard,SCORE-INT-2026-000400-USR-000111,Scorecard with unapproved criterion,,,
+irrelevant_criterion,Scorecard,SCORE-INT-2026-000977-USR-000076,Scorecard with unapproved criterion,,,
+irrelevant_criterion,Scorecard,SCORE-INT-2026-000451-USR-000122,Scorecard with unapproved criterion,,,
+irrelevant_criterion,Scorecard,SCORE-INT-2026-001355-USR-000112,Scorecard with unapproved criterion,,,
+irrelevant_criterion,Scorecard,SCORE-INT-2026-000825-USR-000104,Scorecard with unapproved criterion,,,
